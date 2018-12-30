@@ -41,23 +41,28 @@ def water_drinking_reminder(glass):
     i = ''
     while(i is not 'drank'):
         play_music(water_mp3_file)
-        i = input("Did you drank water ? If yes type 'Drank' : ").lower()
+        print("\n", end="")
+        i = input("Did you drank water ? If yes type 'Drank': ").lower()
         if i == 'drank': 
             f = open(report_file_name, "a")
             f.write("[ " + str(datetime.datetime.now()) + " ] : " + "Water " + str(glass_size) + "ml" + "\n")
+            f.close()
             print("Thank you !!!")
             mixer.music.stop()
             time.sleep(water_interval)
             break
-                
+        
+
 def eye_exercise_reminder():
     i = ''
     while(i is not 'eydone'):
         play_music(eye_mp3_file)
+        print("\n", end="")
         i = input("Did you finish 'Eye Exercise' ? If yes type 'EyDone' : ").lower()
         if i == 'eydone': 
             f = open(report_file_name, "a")
             f.write("[ " + str(datetime.datetime.now()) + " ] : " + "Eye Exercise" + "\n")
+            f.close()
             print("Thank you !!!")
             mixer.music.stop()
             time.sleep(eye_exercise_interval)
@@ -67,10 +72,12 @@ def physical_exercise_reminder():
     i = ''
     while(i is not 'exdone'):
         play_music(physical_mp3_file)
+        print("\n", end="")
         i = input("Did you finish 'Physical Exercise' ? If yes type 'ExDone' : ").lower()
         if i == 'exdone': 
             f = open(report_file_name, "a")
             f.write("[ " + str(datetime.datetime.now()) + " ] : " + "Physical Exercise" + "\n")            
+            f.close()
             print("Thank you !!!")
             mixer.music.stop()
             time.sleep(physical_exercise_interval)
@@ -82,13 +89,13 @@ try:
     while(current_time is not work_end_time):
         if current_time >= work_start_time and current_time <= work_end_time:
             if glass == no_of_glass:
-                pass
+                pass          
             else:
                 water_drinking_reminder(glass)
                 glass += 1
             eye_exercise_reminder()
             physical_exercise_reminder()
             current_time = time.strftime("%H:%M:%S")
-            continue
+
 except Exception as e:
     print("Something wrong !!!")
