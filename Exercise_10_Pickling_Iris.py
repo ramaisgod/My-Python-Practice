@@ -3,16 +3,17 @@ import pickle
 
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 iris_pkl_file = "iris_data.pkl"
-mydata = requests.get(url)
 
-with open("iris.txt", "w") as f:
-    f.writelines(mydata.text)
-    
-with open("iris.txt") as f:
-    iris_contents = f.readlines()
+def fetch_data(url):
+    mydata = requests.get(url)
+    with open("iris_data.txt", "w") as f:
+        f.writelines(mydata.text) 
+    with open("iris_data.txt") as f:
+        iris_contents = f.readlines()
+    return iris_contents
 
 iris_list = []
-for line in iris_contents:
+for line in fetch_data(url):
     iris_list.append([line.replace("\n","")])
 
 with open(iris_pkl_file, "wb") as file_obj:
