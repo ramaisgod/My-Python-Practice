@@ -1,5 +1,19 @@
 # --- Python Mini Project - Library Management System -----
 # Create list_of_books.txt file 
+# List of books :
+'''
+A Passage to India
+Invisible Man
+Don Quixote
+Harry Potter
+Beloved
+Mrs. Dalloway
+Things Fall Apart
+Jane Eyre
+The Color Purple
+Half Girlfriend
+
+'''
 
 import datetime
 
