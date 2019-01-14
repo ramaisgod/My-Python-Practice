@@ -10,7 +10,6 @@ try:
         with open(file) as f:
             lines = f.readlines()
             for line in lines:
-                print(line)
                 pattern = re.compile(r'([a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-]+\.[a-zA-Z]+)')
                 matches = pattern.finditer(line)
                 for match in matches:    
