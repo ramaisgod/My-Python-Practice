@@ -1,0 +1,37 @@
+# Python Exercise 2 - Faulty Calculator
+#Except 45 * 3 = 555, 56 + 9 = 77, 56/6 = 4 
+
+print("Enter 1st Numnber : ")
+num1 = int(input())
+print("Enter Operator (Like +, -, *, /) : ")
+op = input()
+print("Enter 2nd Numnber : ")
+num2 = int(input())
+
+L1 = [45, "*", 3]
+L2 = [56, "+", 9]
+L3 = [56, "/", 6]
+result = [num1, op, num2]
+
+mydict = {"L1":555, "L2":77, "L3":4}
+
+if result == L1:
+    print(mydict["L1"])
+elif result == L2:
+    print(mydict["L2"])
+elif result == L3:
+    print(mydict["L3"])
+elif op == "+":
+    result = num1 + num2
+    print(result)
+elif op == "-":
+    result = num1 - num2
+    print(result)
+elif op == "*":
+    result = num1 * num2
+    print(result)
+elif op == "/":
+    result = num1 / num2
+    print(result)
+else:
+    print("Pleae check operator")

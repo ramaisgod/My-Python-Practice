@@ -1,0 +1,35 @@
+{
+    "student": [
+        {
+            "name": "Ram Krishna",
+            "roll": 56
+        },
+        {
+            "name": "Abhishek Sarswat",
+            "roll": 34
+        }
+    ],
+    "course": {
+            "Python":
+            {
+                "fees": 12000,
+                "duration": "6 months"
+            },
+            "Java Script":
+            {
+                "fees": 14000,
+                "duration": "12 months"                
+            },
+            "VB.NET":
+            {
+                "fees": 10000,
+                "duration": "3 months"                
+            },
+            "Advance Excel":
+            {
+                "fees": 8000,
+                "duration": "2 months"                
+            }
+    }
+
+}
