@@ -13,3 +13,5 @@ for number in range(from_no, to_no+1):
             print(number)
 
 
+# Solved by list comprehension
+[ i for i in range(2, 50) if all(i % num != 0 for num in range(2, i)) if i > 2]
