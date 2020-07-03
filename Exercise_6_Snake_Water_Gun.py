@@ -47,7 +47,8 @@ try:
             print("Computer : ", computer_choice)            
             print("Result : Computer Won !!!")                
         moves = moves + 1
-        continue
+        #continue  have commeted this line since this is not required, continue is used to skip the next few lines of code. There is no code after the continue statement
+        # since rest of the code is written are outside the while loop
 
     player_total_score = 0
     for score in player_score_board:
